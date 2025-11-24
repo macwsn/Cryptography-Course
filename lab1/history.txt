@@ -1,0 +1,33 @@
+1. 
+  500  gpg
+2. 
+  501  gpg --version
+  502  gpg --help
+  503  history
+  504  man gpg
+3.
+  509  gpg --encrypt --recipient mcwsn@student.agh.edu.pl plik.txt
+  510  gpg --decrypt plik.txt.gpg > plik_odszyfrowany.txt
+4.
+  506  gpg --full-generate-key
+  507  pwd
+  508  cd Desktop/kryptografia/
+5.
+  518 gpg --export -a "mcwsn@student.agh.edu.pl" > moj_klucz_pub.pem
+  // wymiana kluczami
+  519  gpg --import krypto_key1.pem
+  520  gpg --list-keys
+  522  gpg --check-sigs 'rraniszewski@student.agh.edu.pl'
+  523  gpg --fingerprint
+  524  gpg --encrypt --armor --recipient rraniszewski@student.agh.edu.pl tajne.txt
+  525  gpg --encrypt --recipient rraniszewski@student.agh.edu.pl tajne.txt
+  // wymiana plikami
+  529  gpg --decrypt message.txt.gpg > wiadomosc_odszyfrowana.txt
+6. 
+  501  gpg --expert --full-gen-key
+  502  gpg --expert --edit-key 1234ABC
+  503  gpg --expert --edit-key CC30FDD6C2FF3B6AF00E68055C1CFED0DECAE6FB
+  505  gpg --export-secret-key --armor CC30FDD6C2FF3B6AF00E68055C1CFED0DECAE6FB
+  506  gpg --edit-key CC30FDD6C2FF3B6AF00E68055C1CFED0DECAE6FB
+
+  
